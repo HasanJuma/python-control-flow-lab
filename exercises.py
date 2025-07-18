@@ -38,25 +38,20 @@ print_greeting()
 
 def check_letter():
     # Your control flow logic goes here
-
-    while True:
-        try:
-            x = input("Enter a letter (a-z or A-Z): ")
-            if len(x) == 1 and x.isalpha():
-                break
+    letter = input("Enter a letter (a-z or A-Z): ")
+    try:
+        if len(letter) == 1 and letter.isalpha():
+            if letter in 'aeiouAEIOU':
+                print(f"The letter {letter} is a vowel.")
             else:
-                print("Invalid input! Please enter a single alphabetical letter.")
-        except:
+                print(f"The letter {letter} is a consonant.")
+        else:
             print("Invalid input! Please enter a single alphabetical letter.")
-
-    if x in 'aeiouAEIOU':
-        print(f"The letter {x} is a vowel.")
-    else:
-        print(f"The letter {x} is a consonant.")
+    except:
+        print("Invalid input! Please enter a single alphabetical letter.")
 
 # Call the function
 check_letter()
-
 
 
 # Exercise 2: Old enough to vote?
