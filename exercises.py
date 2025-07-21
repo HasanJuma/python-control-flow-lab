@@ -54,6 +54,7 @@ def check_letter():
 check_letter()
 
 
+
 # Exercise 2: Old enough to vote?
 #
 # Write a Python function named `check_voting_eligibility` that determines if a user is old enough to vote.
@@ -115,7 +116,7 @@ def calculate_dog_years():
     if Year <=2:
        Dog_Year = Year *10
     elif Year >2:
-        Dog_Year = (2 * 10) + (Year *7 )
+        Dog_Year = (2 * 10) + (Year - 2) * 7 
         
     print (f"The dog's age in dog years is {Dog_Year}")
 
@@ -267,4 +268,5 @@ def guess_number():
     else:
         print(f"Sorry, you failed to guess the number in five attempts ,The number was {target_number}.")
 
+# Call the function
 guess_number()
